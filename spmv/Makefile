@@ -11,17 +11,6 @@ include $(MAKE_DIR)/include_$(TAG).mk
 include $(MAKE_DIR)/include_LIKWID.mk
 INCLUDES  += -I./include
 
-ifeq ($(ENABLE_SPMP),true)
-OPTIONS += -DUSE_SPMP
-INCLUDES += -I./SpMP-master
-LIBS += ./SpMP-master/libspmp.a
-endif
-
-SC_WAYS ?= 1
-ifeq ($(ENABLE_SCC),true)
-OPTIONS += -DUSE_SCC -Khpctag -Kocl -DRESTRICTED_WAYS=$(SC_WAYS)
-endif
-
 VPATH     = $(SRC_DIR)
 ASM      += $(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.s,$(wildcard $(SRC_DIR)/*.cpp))
 OBJ      += $(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.o,$(wildcard $(SRC_DIR)/*.cpp))
