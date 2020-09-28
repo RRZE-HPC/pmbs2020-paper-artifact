@@ -1,0 +1,494 @@
+
+################################################################################
+# Hostname
+################################################################################
+qp4-node-009
+
+################################################################################
+# Operating System
+################################################################################
+CentOS Linux release 8.2.2004 (Core) 
+Derived from Red Hat Enterprise Linux 8.2 (Source)
+NAME="CentOS Linux"
+VERSION="8 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="8"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="CentOS Linux 8 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:8"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-8"
+CENTOS_MANTISBT_PROJECT_VERSION="8"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="8"
+
+CentOS Linux release 8.2.2004 (Core) 
+CentOS Linux release 8.2.2004 (Core) 
+cpe:/o:centos:centos:8
+
+################################################################################
+# Operating System (LSB)
+################################################################################
+./machine-state.sh: line 149: lsb_release: command not found
+
+################################################################################
+# Operating System Kernel
+################################################################################
+Linux qp4-node-009 4.18.0-193.6.3.el8_2.aarch64 #1 SMP Wed Jun 10 11:10:40 UTC 2020 aarch64 aarch64 aarch64 GNU/Linux
+
+################################################################################
+# Logged in users
+################################################################################
+ 20:54:38 up 10:59,  0 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+
+################################################################################
+# CPUset
+################################################################################
+Domain N:
+	0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47
+
+Domain S0:
+	0,1,2,3,4,5,6,7,8,9,10,11
+
+Domain S1:
+	12,13,14,15,16,17,18,19,20,21,22,23
+
+Domain S2:
+	24,25,26,27,28,29,30,31,32,33,34,35
+
+Domain S3:
+	36,37,38,39,40,41,42,43,44,45,46,47
+
+Domain M0:
+	0,1,2,3,4,5,6,7,8,9,10,11
+
+Domain M1:
+	12,13,14,15,16,17,18,19,20,21,22,23
+
+Domain M2:
+	24,25,26,27,28,29,30,31,32,33,34,35
+
+Domain M3:
+	36,37,38,39,40,41,42,43,44,45,46,47
+
+
+################################################################################
+# CGroups
+################################################################################
+Allowed CPUs: 0-47
+Allowed Memory controllers: 0-3
+
+################################################################################
+# Topology
+################################################################################
+--------------------------------------------------------------------------------
+CPU name:	
+CPU type:	Fujitsu A64FX (FX1000)
+CPU stepping:	0
+********************************************************************************
+Hardware Thread Topology
+********************************************************************************
+Sockets:		4
+Cores per socket:	12
+Threads per core:	1
+--------------------------------------------------------------------------------
+HWThread	Thread		Core		Socket		Available
+0		0		0		0		*
+1		0		1		0		*
+2		0		2		0		*
+3		0		3		0		*
+4		0		4		0		*
+5		0		5		0		*
+6		0		6		0		*
+7		0		7		0		*
+8		0		8		0		*
+9		0		9		0		*
+10		0		10		0		*
+11		0		11		0		*
+12		0		0		1		*
+13		0		1		1		*
+14		0		2		1		*
+15		0		3		1		*
+16		0		4		1		*
+17		0		5		1		*
+18		0		6		1		*
+19		0		7		1		*
+20		0		8		1		*
+21		0		9		1		*
+22		0		10		1		*
+23		0		11		1		*
+24		0		0		2		*
+25		0		1		2		*
+26		0		2		2		*
+27		0		3		2		*
+28		0		4		2		*
+29		0		5		2		*
+30		0		6		2		*
+31		0		7		2		*
+32		0		8		2		*
+33		0		9		2		*
+34		0		10		2		*
+35		0		11		2		*
+36		0		0		3		*
+37		0		1		3		*
+38		0		3		3		*
+39		0		4		3		*
+40		0		5		3		*
+41		0		6		3		*
+42		0		7		3		*
+43		0		8		3		*
+44		0		9		3		*
+45		0		10		3		*
+46		0		11		3		*
+47		0		12		3		*
+--------------------------------------------------------------------------------
+Socket 0:		( 0 1 2 3 4 5 6 7 8 9 10 11 )
+Socket 1:		( 12 13 14 15 16 17 18 19 20 21 22 23 )
+Socket 2:		( 24 25 26 27 28 29 30 31 32 33 34 35 )
+Socket 3:		( 36 37 38 39 40 41 42 43 44 45 46 47 )
+--------------------------------------------------------------------------------
+********************************************************************************
+Cache Topology
+********************************************************************************
+********************************************************************************
+NUMA Topology
+********************************************************************************
+NUMA domains:		4
+--------------------------------------------------------------------------------
+Domain:			0
+Processors:		( 0 1 2 3 4 5 6 7 8 9 10 11 )
+Distances:		10 20 30 30
+Free memory:		7157.5 MB
+Total memory:		7640.56 MB
+--------------------------------------------------------------------------------
+Domain:			1
+Processors:		( 12 13 14 15 16 17 18 19 20 21 22 23 )
+Distances:		20 10 30 30
+Free memory:		7668.62 MB
+Total memory:		8176.44 MB
+--------------------------------------------------------------------------------
+Domain:			2
+Processors:		( 24 25 26 27 28 29 30 31 32 33 34 35 )
+Distances:		30 30 10 20
+Free memory:		8046.56 MB
+Total memory:		8176.44 MB
+--------------------------------------------------------------------------------
+Domain:			3
+Processors:		( 36 37 38 39 40 41 42 43 44 45 46 47 )
+Distances:		30 30 20 10
+Free memory:		8057.69 MB
+Total memory:		8156 MB
+--------------------------------------------------------------------------------
+
+################################################################################
+# NUMA Topology
+################################################################################
+available: 4 nodes (0-3)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11
+node 0 size: 7640 MB
+node 0 free: 7173 MB
+node 1 cpus: 12 13 14 15 16 17 18 19 20 21 22 23
+node 1 size: 8176 MB
+node 1 free: 7668 MB
+node 2 cpus: 24 25 26 27 28 29 30 31 32 33 34 35
+node 2 size: 8176 MB
+node 2 free: 8046 MB
+node 3 cpus: 36 37 38 39 40 41 42 43 44 45 46 47
+node 3 size: 8156 MB
+node 3 free: 8057 MB
+node distances:
+node   0   1   2   3 
+  0:  10  20  30  30 
+  1:  20  10  30  30 
+  2:  30  30  10  20 
+  3:  30  30  20  10 
+
+################################################################################
+# Prefetchers
+################################################################################
+INFO: Manipulation of CPU features is only available on Intel platforms
+
+################################################################################
+# Load
+################################################################################
+0.00 0.00 0.00 1/559 12946
+
+################################################################################
+# Performance energy bias
+################################################################################
+
+################################################################################
+# NUMA balancing
+################################################################################
+Enabled: 0
+
+################################################################################
+# General memory info
+################################################################################
+MemTotal:       32921024 kB
+MemFree:        31657664 kB
+MemAvailable:   31500160 kB
+Buffers:               0 kB
+Cached:           100864 kB
+SwapCached:            0 kB
+Active:           153408 kB
+Inactive:          57984 kB
+Active(anon):     120064 kB
+Inactive(anon):     8192 kB
+Active(file):      33344 kB
+Inactive(file):    49792 kB
+Unevictable:       19584 kB
+Mlocked:           19584 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:           128 kB
+AnonPages:        143616 kB
+Mapped:            48768 kB
+Shmem:              8448 kB
+KReclaimable:      55296 kB
+Slab:             301184 kB
+SReclaimable:      55296 kB
+SUnreclaim:       245888 kB
+KernelStack:       39168 kB
+PageTables:         4608 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    32921024 kB
+Committed_AS:     414720 kB
+VmallocTotal:   133009506240 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+Percpu:            52224 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+
+################################################################################
+# Transparent huge pages
+################################################################################
+Enabled: always madvise [never]
+Use zero page: 1
+
+################################################################################
+# Hardware power limits
+################################################################################
+
+################################################################################
+# Compiler
+################################################################################
+gcc (GCC) 10.1.1 20200507 (Red Hat 10.1.1-1)
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+################################################################################
+# MPI
+################################################################################
+No MPI found
+
+################################################################################
+# dmidecode
+################################################################################
+dmidecode not executable, so ask your administrator to put the
+dmidecode output to a file (configured /etc/dmidecode.txt)
+
+################################################################################
+# environment variables
+################################################################################
+SLURM_MPI_TYPE=pmix
+LD_LIBRARY_PATH=/opt/rh/gcc-toolset-10/root/usr/lib64:/opt/rh/gcc-toolset-10/root/usr/lib:/opt/rh/gcc-toolset-10/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-10/root/usr/lib/dyninst:/opt/rh/gcc-toolset-10/root/usr/lib64:/opt/rh/gcc-toolset-10/root/usr/lib
+LS_COLORS=rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.zst=38;5;9:*.tzst=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.wim=38;5;9:*.swm=38;5;9:*.dwm=38;5;9:*.esd=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.mjpg=38;5;13:*.mjpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+SRUN_DEBUG=3
+SLURM_STEP_ID=0
+SLURM_NODEID=0
+SLURM_TASK_PID=12503
+SSH_CONNECTION=131.188.6.20 49914 132.199.103.11 22
+SLURM_PRIO_PROCESS=0
+SLURM_CPU_BIND_VERBOSE=quiet
+MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH
+LANG=en_DK.UTF-8
+HISTCONTROL=ignoredups
+PMIX_SERVER_URI2USOCK=pmix-server:12492:/tmp/pmix-12492
+HOSTNAME=qp4-node-009
+SLURM_STEPID=0
+SLURM_SRUN_COMM_HOST=10.10.10.1
+PCP_DIR=/opt/rh/gcc-toolset-10/root
+SLURM_PROCID=0
+SLURM_JOB_GID=5001
+SLURM_CPU_BIND=quiet,mask_cpu:0xFFFFFFFFFFFF
+SLURMD_NODENAME=qp4-node-009
+SSH_AUTH_SOCK=/run/user/64192/ssh-agent.socket
+SLURM_TASKS_PER_NODE=1
+S_COLORS=auto
+XDG_SESSION_ID=23854
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+PMIX_RANK=0
+SLURM_NNODES=1
+ENV=/usr/share/Modules/init/profile.sh
+SLURM_LAUNCH_NODE_IPADDR=10.10.10.1
+SLURM_STEP_TASKS_PER_NODE=1
+SLURM_PMIX_MAPPING_SERV=(vector,(0,1,1))
+SLURM_JOB_NODELIST=qp4-node-009
+SLURM_CLUSTER_NAME=qp4
+LC_CTYPE=UTF-8
+SLURM_NODELIST=qp4-node-009
+CLICOLOR=1
+SSH_CLIENT=131.188.6.20 49914 22
+SLURM_NTASKS=1
+PMIX_PTL_MODULE=tcp,usock
+SLURM_UMASK=0022
+SLURM_JOB_CPUS_PER_NODE=48
+BASH_ENV=/usr/share/Modules/init/bash
+SLURM_TOPOLOGY_ADDR=S1.qp4-node-009
+SLURM_WORKING_CLUSTER=qp4:kern-root:6897:8960:102
+PMIX_SERVER_URI=pmix-server:12492:/tmp/pmix-12492
+SLURM_STEP_NODELIST=qp4-node-009
+SLURM_JOB_NAME=bash
+SLURM_SRUN_COMM_PORT=37551
+TMPDIR=/tmp
+SLURM_JOBID=82431
+SLURM_CONF=/var/spool/slurmd/conf-cache/slurm.conf
+LOADEDMODULES=
+SLURM_JOB_QOS=normal
+SLURM_TOPOLOGY_ADDR_PATTERN=switch.node
+SSH_TTY=/dev/pts/12
+SLURM_CPUS_ON_NODE=48
+PMIX_BFROP_BUFFER_TYPE=PMIX_BFROP_BUFFER_NON_DESC
+SLURM_JOB_NUM_NODES=1
+TERM=xterm-256color
+SHELL=/bin/bash
+X_SCLS=gcc-toolset-10 
+SLURM_JOB_UID=64192
+PMIX_DSTORE_ESH_BASE_PATH=/var/spool/slurmd/pmix.82431.0//pmix_dstor_12492
+SLURM_JOB_PARTITION=qp4
+PMIX_SERVER_URI2=pmix-server.12492;tcp4://127.0.0.1:59655
+SLURM_PTY_WIN_ROW=83
+SLURM_CPU_BIND_LIST=0xFFFFFFFFFFFF
+SLURM_PTY_WIN_COL=272
+SLURM_NPROCS=1
+SHLVL=7
+SLURM_SUBMIT_HOST=kern-login-001
+SLURM_JOB_ACCOUNT=externedu
+MANPATH=/opt/rh/gcc-toolset-10/root/usr/share/man:
+PMIX_SERVER_URI21=pmix-server.12492;tcp4://127.0.0.1:59655
+SLURM_STEP_LAUNCHER_PORT=37551
+MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
+SLURM_PTY_PORT=36585
+SLURM_GTIDS=0
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/64192/bus
+XDG_RUNTIME_DIR=/run/user/64192
+MODULEPATH_modshare=/usr/share/modulefiles:1:/etc/modulefiles:1:/usr/share/Modules/modulefiles:1
+PATH=/opt/rh/gcc-toolset-10/root/usr/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin
+SLURM_JOB_ID=82431
+SLURM_CPU_BIND_TYPE=mask_cpu:
+PS1=\[\033[01;32m\]\u@\h \[\033[00;31m\]\w \$ \[\033[00m\]
+PMIX_SECURITY_MODE=munge,native,none
+SLURM_STEP_NUM_TASKS=1
+MODULESHOME=/usr/share/Modules
+PKG_CONFIG_PATH=/opt/rh/gcc-toolset-10/root/usr/lib64/pkgconfig
+INFOPATH=/opt/rh/gcc-toolset-10/root/usr/share/info
+PMIX_NAMESPACE=slurm.pmix.82431.0
+HISTSIZE=100000
+HISTFILESIZE=100000
+SLURM_STEP_NUM_NODES=1
+PMIX_GDS_MODULE=ds12,hash
+SLURM_LOCALID=0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+BASH_FUNC_module%%=() {  _moduleraw "$@" 2>&1
+}
+BASH_FUNC_switchml%%=() {  typeset swfound=1;
+ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
+ typeset swname='main';
+ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then
+ typeset swfound=0;
+ unset MODULES_USE_COMPAT_VERSION;
+ fi;
+ else
+ typeset swname='compatibility';
+ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then
+ typeset swfound=0;
+ MODULES_USE_COMPAT_VERSION=1;
+ export MODULES_USE_COMPAT_VERSION;
+ fi;
+ fi;
+ if [ $swfound -eq 0 ]; then
+ echo "Switching to Modules $swname version";
+ source /usr/share/Modules/init/bash;
+ else
+ echo "Cannot switch to Modules $swname version, command not found";
+ return 1;
+ fi
+}
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then
+ eval "module $@";
+ else
+ /usr/bin/scl "$@";
+ fi
+}
+BASH_FUNC__moduleraw%%=() {  unset _mlre _mlIFS _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre}/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS _mlshdbg;
+ return $_mlstatus
+}
+_=/usr/bin/env
