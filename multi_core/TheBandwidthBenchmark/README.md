@@ -5,7 +5,8 @@ However for proper unrolling on A64FX intrinsic version of the kernels are writt
 
 # How to compile intrinsic version
 * Ensure the flags `-DACLE_VERSION -fno-unroll-loops` are enabled in config.mk
-* Run `./generate_all.sh`
+* Run `./generate_all.sh 8`, for 8 times unrolled version
+* Run `./bwBench-<TOOLCHAIN>` executable (see below).
 
 # Readme of The Bandwidth Benchmark
 
