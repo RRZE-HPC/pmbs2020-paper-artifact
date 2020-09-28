@@ -1,9 +1,9 @@
 # Artifact Description: Performance Modeling of Streaming Kernels and Sparse Matrix-Vector Multiplication on A64FX
 
 * Christie Alappat, RRZE University of Erlangen-Nürnberg, christie.alappat@fau.de
+* Jan Laukemann, RRZE University of Erlangen-Nürnberg, jan.laukemann@fau.de
 * Thomas Gruber, RRZE University of Erlangen-Nürnberg, thomas.gruber@fau.de
 * Georg Hager, RRZE University of Erlangen-Nürnberg, georg.hager@fau.de
-* Jan Laukemann, RRZE University of Erlangen-Nürnberg, jan.laukemann@fau.de
 * Nils Meyer, University of Regensburg, nils.meyer@ur.de
 * Gerhard Wellein, RRZE University of Erlangen-Nürnberg, gerhard.wellein@fau.de
 * Tilo Wettig, University of Regensburg, tilo.wettig@ur.de
@@ -42,8 +42,8 @@ The results should be reproducible on any FX700 system.
 * GCC 10.1.1
 
 ### A.2.5 Datasets
-None necessary, everything is part of the code.
-
+For SpMV we use matrices from SuiteSparse Matrix Collection
+(https://suitesparse-collection-website.herokuapp.com).
 
 ## A.3 Installation
 None necessary.
