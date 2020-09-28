@@ -4,8 +4,8 @@
 * Jan Laukemann, RRZE University of Erlangen-Nürnberg, jan.laukemann@fau.de
 * Thomas Gruber, RRZE University of Erlangen-Nürnberg, thomas.gruber@fau.de
 * Georg Hager, RRZE University of Erlangen-Nürnberg, georg.hager@fau.de
-* Nils Meyer, University of Regensburg, nils.meyer@ur.de
 * Gerhard Wellein, RRZE University of Erlangen-Nürnberg, gerhard.wellein@fau.de
+* Nils Meyer, University of Regensburg, nils.meyer@ur.de
 * Tilo Wettig, University of Regensburg, tilo.wettig@ur.de
 
 ## A.1 Abstract
