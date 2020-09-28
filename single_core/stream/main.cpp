@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 			a[i] = 0.04*i;
 			b[i] = 0.03*i;
 			c[i] = 0.02*i;
-			d[i] = 0.01*i
+			d[i] = 0.01*i;
 		}
 
 		INIT_TIMER(load_warm);
@@ -89,6 +89,7 @@ int main(int argc, char *argv[])
 			printf("Size = %f\n", numArrays*N*sizeof(double)/(1000.0));
 			printf("Perf_cy = %f cy/CL\n", time*freq*8.0/((double)N*rep));
 		}
+
 		free(a);
 		free(b);
 		free(c);
