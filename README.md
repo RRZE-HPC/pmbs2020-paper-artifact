@@ -57,19 +57,32 @@ Download script and benchmark codes:
 git clone https://github.com/RRZE-HPC/pmbs2020-paper-artifact
 cd pmbs20-paper-appendix/
 ```
-
-**TODO...**
+The description for compiling and running can be found in the corresponding README.md files of each benchmark.
 
 
 ## A.5 Evaluation and expected result
-**TODO in-core**
-Compare numbers to Table II.
+### In-core instructions
+Navigate to the [in-core_instructions directory](single_core/in-core_instructions):
+```
+cd single_core/in-core_instructions/
+```
+Run the validation accordingly to the README file and compare the results to Table II in the paper.
 
-**TODO ECM**
-Compare numbers to Table III
+### Single-core
+We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
+Navigate to the according directory:
+```
+cd single_core/[stream|stencil]/
+```
+Run the validation accordingly to the README file and compare the results to Table III in the paper.
 
-**TODO full node**
-Compare numbers to Figure 5 (right).
+### Multi-core
+We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
+Navigate to the according directory:
+```
+cd multi_core/[stream|stencil]/
+```
+Run the validation accordingly to the README file and compare the results to Figure 4 in the paper.
 
 
 ## A.6 Experiment customization
