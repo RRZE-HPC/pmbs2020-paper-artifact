@@ -9,16 +9,19 @@
 * Tilo Wettig, University of Regensburg, tilo.wettig@ur.de
 
 ## A.1 Abstract
-The A64FX CPU powers the current #1 supercomputer in the Top500 list.
-Although it is a traditional cache-based multicore processor, its peak performance and 
-memory bandwidth rival accelerator devices.
-Code for such a new architecture requires a good grasp of its performance features as
-a basis for performance models.
-In this paper we construct the Execution-Cache-Memory (ECM) performance model for the
-A64FX processor in the FX700 supercomputer and validate it using streaming benchmarks.
-Applying the model to sparse matrix-vector multiplication (SpMV), we motivate why the
-CSR matrix storage format is inappropriate and how the SELL-C-σ format with suitable
-code optimizations can achieve bandwidth saturation with SpMV.
+The A64FX CPU powers the current #1 supercomputer on the Top500
+list.  Although it is a traditional cache-based multicore processor,
+its peak performance and memory bandwidth rival accelerator devices.
+Generating efficient code for such a new architecture requires a good understanding of its
+performance features. Using these features, we construct the
+Execution-Cache-Memory (ECM) performance
+model for the A64FX processor in the FX700 supercomputer and
+validate it using streaming loops. We also identify architectural peculiarities
+and derive optimization hints. Applying the ECM model to sparse
+matrix-vector multiplication (SpMV), we motivate why the CRS matrix
+storage format is inappropriate and how the SELL-C-σ format with
+suitable code optimizations can achieve bandwidth
+saturation for SpMV. 
 
 
 ## A.2 Description
