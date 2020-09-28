@@ -70,7 +70,7 @@ Run the validation accordingly to the README file and compare the results to Tab
 
 ### Single-core
 We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
-Navigate to the according directory:
+Navigate to either one of the directories:
 ```
 cd single_core/[stream|stencil]/
 ```
@@ -78,7 +78,7 @@ Run the validation accordingly to the README file and compare the results to Tab
 
 ### Multi-core
 We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
-Navigate to the according directory:
+Navigate to either one of the directories:
 ```
 cd multi_core/[stream|stencil]/
 ```
