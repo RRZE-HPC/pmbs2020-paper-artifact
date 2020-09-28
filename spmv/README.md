@@ -7,7 +7,7 @@
 
 ## How to run
 * Get options using `./spmv-[TAG] -h`
-* For running with HPCG matrix of size 128^3 on 1 CMG using SELL-32-1, currently only C=1 (CRS) and C=32 (chunkheight) code is optimised:
+* For running with HPCG matrix of size 128^3 on 1 CMG using SELL-32-1, currently only C=1 (CRS) and C=32 code is optimised:
 ```
 OMP_NUM_THREADS=$thread OMP_PLACES=cores OMP_PROC_BIND=close ./spmv-[TAG] -S 128 -C 32 -Z 1
 ```
