@@ -1,6 +1,7 @@
-# Artifact Description: An Execution-Cache-Memory Performance Model for the A64FX CPU
+# Artifact Description: Performance Modeling of Streaming Kernels and Sparse Matrix-Vector Multiplication on A64FX
 
 * Christie Alappat, RRZE University of Erlangen-Nürnberg, christie.alappat@fau.de
+* Thomas Gruber, RRZE University of Erlangen-Nürnberg, thomas.gruber@fau.de
 * Georg Hager, RRZE University of Erlangen-Nürnberg, georg.hager@fau.de
 * Jan Laukemann, RRZE University of Erlangen-Nürnberg, jan.laukemann@fau.de
 * Nils Meyer, University of Regensburg, nils.meyer@ur.de
