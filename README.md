@@ -74,22 +74,28 @@ cd single_core/in-core_instructions/
 ```
 Run the validation accordingly to the README file and compare the results to Table II in the paper.
 
-### Single-core
-We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
+### Single-core STREAM and 2d5pt
+We provide code to reproduce the single-core streaming kernel and 2d five-point benchmarks for shown in this publication.  
 Navigate to either one of the directories:
 ```
 cd single_core/[stream|stencil]/
 ```
 Run the validation accordingly to the README file and compare the results to Table III in the paper.
 
-### Multi-core
-We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
+### Multi-core STREAM and 2d5pt
+We provide code to reproduce the multi-core streaming kernel and 2d five-point benchmarks shown in this publication.  
 Navigate to either one of the directories:
 ```
 cd multi_core/[stream|stencil]/
 ```
 Run the validation accordingly to the README file and compare the results to Figure 4 in the paper.
 
+### Sparse Matrix-Vector Multiplication (SpMV)
+To reproduce the results of the SpMV kernels in this work, navigate to the [SpMV directory](spmv/):
+```
+cd spmv/
+```
+Run the benchmarks according to the README file and compare the results to Figure 5 in the paper.
 
 ## A.6 Experiment customization
 None
