@@ -39,11 +39,12 @@ git clone https://github.com/RRZE-HPC/pmbs2020-paper-artifact
 
 ### A.2.3 Hardware dependencies
 We ran on a FX700 system (A64FX architecture) at 1.8 GHz with 48 cores per CPU.
-The results should be reproducible on any FX700 system.
+The results should be reproducible on any FX700 system.  
 You can find a detailed state description of the system we used for running the experiments in [`machine_state.txt`](machine_state.txt).
 
 ### A.2.4 Software dependencies
 * GCC 10.1.1
+
 You can find a detailed state description of the system we used for running the experiments in [`machine_state.txt`](machine_state.txt).
 
 ### A.2.5 Datasets
