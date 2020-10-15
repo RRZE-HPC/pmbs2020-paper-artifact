@@ -39,10 +39,13 @@ git clone https://github.com/RRZE-HPC/pmbs2020-paper-artifact
 
 ### A.2.3 Hardware dependencies
 We ran on a FX700 system (A64FX architecture) at 1.8 GHz with 48 cores per CPU.
-The results should be reproducible on any FX700 system.
+The results should be reproducible on any FX700 system.  
+You can find a detailed state description of the system we used for running the experiments in [`machine_state.txt`](machine_state.txt).
 
 ### A.2.4 Software dependencies
 * GCC 10.1.1
+
+You can find a detailed state description of the system we used for running the experiments in [`machine_state.txt`](machine_state.txt).
 
 ### A.2.5 Datasets
 For SpMV we use matrices from SuiteSparse Matrix Collection
@@ -71,22 +74,28 @@ cd single_core/in-core_instructions/
 ```
 Run the validation accordingly to the README file and compare the results to Table II in the paper.
 
-### Single-core
-We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
+### Single-core STREAM and 2d5pt
+We provide code to reproduce the single-core streaming kernel and 2d five-point benchmarks for shown in this publication.  
 Navigate to either one of the directories:
 ```
 cd single_core/[stream|stencil]/
 ```
 Run the validation accordingly to the README file and compare the results to Table III in the paper.
 
-### Multi-core
-We provide code to reproduce the streaming kernels and the 2d five-point benchmark.  
+### Multi-core STREAM and 2d5pt
+We provide code to reproduce the multi-core streaming kernel and 2d five-point benchmarks shown in this publication.  
 Navigate to either one of the directories:
 ```
 cd multi_core/[stream|stencil]/
 ```
 Run the validation accordingly to the README file and compare the results to Figure 4 in the paper.
 
+### Sparse Matrix-Vector Multiplication (SpMV)
+To reproduce the results of the SpMV kernels in this work, navigate to the [SpMV directory](spmv/):
+```
+cd spmv/
+```
+Run the benchmarks according to the README file and compare the results to Figure 5 in the paper.
 
 ## A.6 Experiment customization
 None

@@ -1,6 +1,7 @@
 #define INSTR ld1d
 #define NINST 10
-#define STRIDE #7
+#define STRIDE1 #0
+#define STRIDE2 #16
 #define N x0
 
 .arch armv8.2-a+sve
@@ -27,19 +28,12 @@ latency:
         fmov    v2.2d, #1.00000000
 
         ptrue   p0.d
-        ptrue   p1.d
+        ptrue   p2.d, vl8
+        pfalse  p1.b
+        trn1    p1.d, p2.d, p1.d
 
-        mov     z20.d, p0/z, STRIDE
-        mov     z21.d, p0/z, STRIDE
-        mov     z22.d, p0/z, STRIDE
-        mov     z23.d, p0/z, STRIDE
-        mov     z24.d, p0/z, STRIDE
-        mov     z25.d, p0/z, STRIDE
-        mov     z26.d, p0/z, STRIDE
-        mov     z27.d, p0/z, STRIDE
-        mov     z28.d, p0/z, STRIDE
-        mov     z29.d, p0/z, STRIDE
-
+        mov     z20.d, p0/z, STRIDE1
+        mov     z20.d, p1/m, STRIDE2
     
         mov     x0, sp
         # align to 64 byte
@@ -47,30 +41,29 @@ latency:
         sub     x6, x1, #8192
         
         ldr     x1, [sp]
-        st1d   {z0.d}, p0, [sp]
-
+        st1d   {z20.d}, p0, [sp]
 loop:
         subs      x4, x4, #1
-        INSTR   z0.d, p0/z, [x0, z20.d]
-        ld1d    z11.d, p1/z, [x6]
-        INSTR   z1.d, p0/z, [x0, z21.d]
-        ld1d    z12.d, p1/z, [x6]
-        INSTR   z2.d, p0/z, [x0, z22.d]
-        ld1d    z13.d, p1/z, [x6]
-        INSTR   z3.d, p0/z, [x0, z23.d]
-        ld1d    z14.d, p1/z, [x6]
-        INSTR   z4.d, p0/z, [x0, z24.d]
-        ld1d    z15.d, p1/z, [x6]
-        INSTR   z5.d, p0/z, [x0, z25.d] 
-        ld1d    z16.d, p1/z, [x6]
-        INSTR   z6.d, p0/z, [x0, z26.d]
-        ld1d    z17.d, p1/z, [x6]
-        INSTR   z7.d, p0/z, [x0, z27.d] 
-        ld1d    z18.d, p1/z, [x6]
-        INSTR   z8.d, p0/z, [x0, z28.d]
-        ld1d    z19.d, p1/z, [x6]
-        INSTR   z9.d, p0/z, [x0, z29.d] 
-        ld1d    z30.d, p1/z, [x6]
+        ld1d    z20.d, p1/z, [sp]
+        INSTR   z0.d, p0/z, [x0, z20.d, lsl 3]
+        ld1d    z21.d, p1/z, [sp]
+        INSTR   z1.d, p0/z, [x0, z21.d, lsl 3]
+        ld1d    z22.d, p1/z, [sp]
+        INSTR   z2.d, p0/z, [x0, z22.d, lsl 3]
+        ld1d    z23.d, p1/z, [sp]
+        INSTR   z3.d, p0/z, [x0, z23.d, lsl 3]
+        ld1d    z24.d, p1/z, [sp]
+        INSTR   z4.d, p0/z, [x0, z24.d, lsl 3]
+        ld1d    z25.d, p1/z, [sp]
+        INSTR   z5.d, p0/z, [x0, z25.d, lsl 3] 
+        ld1d    z26.d, p1/z, [sp]
+        INSTR   z6.d, p0/z, [x0, z26.d, lsl 3]
+        ld1d    z27.d, p1/z, [sp]
+        INSTR   z7.d, p0/z, [x0, z27.d, lsl 3] 
+        ld1d    z28.d, p1/z, [sp]
+        INSTR   z8.d, p0/z, [x0, z28.d, lsl 3]
+        ld1d    z29.d, p1/z, [sp]
+        INSTR   z9.d, p0/z, [x0, z29.d, lsl 3] 
         bne       loop
 done:
         str     x1, [sp]

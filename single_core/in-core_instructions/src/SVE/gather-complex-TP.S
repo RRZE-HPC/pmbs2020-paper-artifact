@@ -1,6 +1,7 @@
 #define INSTR ld1d
 #define NINST 16
-#define STRIDE #7
+#define STRIDE1 #6
+#define STRIDE2 #8
 #define N x0
 
 .arch armv8.2-a+sve
@@ -23,46 +24,35 @@ latency:
         mov     x4, N
         
         ptrue   p0.d
+        ptrue   p2.d, vl8
+        pfalse  p1.b
+        trn1    p1.d, p2.d, p1.d
 
-        mov     z16.d, p0/z, STRIDE
-        mov     z17.d, p0/z, STRIDE
-        mov     z18.d, p0/z, STRIDE
-        mov     z19.d, p0/z, STRIDE
-        mov     z20.d, p0/z, STRIDE
-        mov     z21.d, p0/z, STRIDE
-        mov     z22.d, p0/z, STRIDE
-        mov     z23.d, p0/z, STRIDE
-        mov     z24.d, p0/z, STRIDE
-        mov     z25.d, p0/z, STRIDE
-        mov     z26.d, p0/z, STRIDE
-        mov     z27.d, p0/z, STRIDE
-        mov     z28.d, p0/z, STRIDE
-        mov     z29.d, p0/z, STRIDE
-        mov     z30.d, p0/z, STRIDE
-        mov     z31.d, p0/z, STRIDE
-    
+        mov     z0.d, p0/z, STRIDE1
+        mov     z0.d, p1/m, STRIDE2
+
         mov     x1, sp
         # align to 64 byte
         and     x1, x1, #0xFFFFFFFFFFFFFFC0
 
 loop:
         subs      x4, x4, #1
-        INSTR    z0.d, p0/z, [x1, z20.d]
-        INSTR    z1.d, p0/z, [x1, z21.d]
-        INSTR    z2.d, p0/z, [x1, z22.d]
-        INSTR    z3.d, p0/z, [x1, z23.d]
-        INSTR    z4.d, p0/z, [x1, z24.d]
-        INSTR    z5.d, p0/z, [x1, z25.d] 
-        INSTR    z6.d, p0/z, [x1, z26.d]
-        INSTR    z7.d, p0/z, [x1, z27.d] 
-        INSTR    z8.d, p0/z, [x1, z28.d]
-        INSTR    z9.d, p0/z, [x1, z29.d] 
-        INSTR    z10.d, p0/z, [x1, z30.d]
-        INSTR    z11.d, p0/z, [x1, z31.d] 
-        INSTR    z12.d, p0/z, [x1, z16.d]
-        INSTR    z13.d, p0/z, [x1, z17.d] 
-        INSTR    z14.d, p0/z, [x1, z18.d]
-        INSTR    z15.d, p0/z, [x1, z19.d] 
+        INSTR    z12.d, p0/z, [x1, z0.d, lsl 3]
+        INSTR    z13.d, p0/z, [x1, z0.d, lsl 3] 
+        INSTR    z14.d, p0/z, [x1, z0.d, lsl 3]
+        INSTR    z15.d, p0/z, [x1, z0.d, lsl 3] 
+        INSTR    z16.d, p0/z, [x1, z0.d, lsl 3]
+        INSTR    z1.d,  p0/z, [x1, z0.d, lsl 3]
+        INSTR    z2.d,  p0/z, [x1, z0.d, lsl 3]
+        INSTR    z3.d,  p0/z, [x1, z0.d, lsl 3]
+        INSTR    z4.d,  p0/z, [x1, z0.d, lsl 3]
+        INSTR    z5.d,  p0/z, [x1, z0.d, lsl 3] 
+        INSTR    z6.d,  p0/z, [x1, z0.d, lsl 3]
+        INSTR    z7.d,  p0/z, [x1, z0.d, lsl 3] 
+        INSTR    z8.d,  p0/z, [x1, z0.d, lsl 3]
+        INSTR    z9.d,  p0/z, [x1, z0.d, lsl 3] 
+        INSTR    z10.d, p0/z, [x1, z0.d, lsl 3]
+        INSTR    z11.d, p0/z, [x1, z0.d, lsl 3] 
         bne       loop
 done:
         # pop callee-save registers from stack
