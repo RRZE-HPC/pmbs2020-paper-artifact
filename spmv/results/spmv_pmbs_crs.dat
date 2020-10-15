@@ -1,0 +1,8 @@
+                   Matrix,  ACLE-SpMV,    n,    C,    Z,    R,   LB,    u
+               af_shell10,    68.4681,    1,    1,    1,   on,  row,    1
+               BenElechi1,    86.6416,    1,    1,    1,  off,  row,    2
+                  bone010,    93.5355,    1,    1,    1,  off,  row,    4
+         HPCG-128-128-128,    57.0543,    1,    1,    1,   on,  row,    2
+                  ML_Geer,   102.8828,    1,    1,    1,   on,  row,    2
+                nlpkkt120,    60.1113,    1,    1,    1,  off,  row,    1
+                pwtk_symm,    78.2870,    1,    1,    1,   on,  row,    4
