@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 #ifdef LIKWID_PERFMON
 	LIKWID_MARKER_INIT;
 #endif
-	double freq = 1.8*1e9;
+	double freq = 2.2*1e9;
 
 	int N_start = 200;
 	int N_end = 56000000;
@@ -41,6 +41,11 @@ int main(int argc, char *argv[])
 		double *b = (double*) malloc(sizeof(double)*N_alloc);
 		double *c = (double*) malloc(sizeof(double)*N_alloc);
 		double *d = (double*) malloc(sizeof(double)*N_alloc);
+#elif defined(THPALLOC)
+		double *a = (double *) hp_allocate(sizeof(double)*N_alloc);
+		double *b = (double *) hp_allocate(sizeof(double)*N_alloc);
+		double *c = (double *) hp_allocate(sizeof(double)*N_alloc);
+		double *d = (double *) hp_allocate(sizeof(double)*N_alloc);
 #else
 		double *a = (double *) allocate(1024, sizeof(double)*N_alloc);
 		double *b = (double *) allocate(1024, sizeof(double)*N_alloc);
@@ -89,11 +94,17 @@ int main(int argc, char *argv[])
 			printf("Size = %f\n", numArrays*N*sizeof(double)/(1000.0));
 			printf("Perf_cy = %f cy/CL\n", time*freq*8.0/((double)N*rep));
 		}
-
+#ifndef THPALLOC
 		free(a);
 		free(b);
 		free(c);
 		free(d);
+#else
+        hp_free(a, sizeof(double)*N_alloc);
+        hp_free(b, sizeof(double)*N_alloc);
+        hp_free(c, sizeof(double)*N_alloc);
+        hp_free(d, sizeof(double)*N_alloc);
+#endif
 	}
 
 #ifdef LIKWID_PERFMON

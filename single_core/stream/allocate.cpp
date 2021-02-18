@@ -28,6 +28,31 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
+#include <sys/mman.h>
+
+void* hp_allocate(size_t nbytes) {
+    int page_size = 2097152;
+    void* ret_ptr = NULL;
+    size_t num_large_pages = nbytes / page_size;
+    if (nbytes > num_large_pages * page_size) {
+        num_large_pages++;
+    }
+    nbytes = (size_t) num_large_pages * page_size;
+    //printf("trying to allocate %ld pages\n", num_large_pages);
+    ret_ptr = mmap(NULL, nbytes,
+                   PROT_READ | PROT_WRITE,
+                   MAP_ANONYMOUS | MAP_PRIVATE | MAP_HUGETLB,
+                   -1, 0); 
+    if ((ret_ptr == (void *)(-1))) {
+        fprintf(stderr,"mmap call failed\n");
+        exit(1);
+    }
+    return ret_ptr;
+}
+
+void hp_free(void * ptr, size_t nbytes) {
+    munmap(ptr, nbytes);
+}
 
 void* allocate (int alignment, size_t bytesize)
 {

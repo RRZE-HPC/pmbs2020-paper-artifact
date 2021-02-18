@@ -28,6 +28,8 @@
 #ifndef __ALLOCATE_H_
 #define __ALLOCATE_H_
 
+extern void* hp_allocate (size_t nbytes);
+extern void hp_free(void * ptr, size_t nbytes);
 extern void* allocate (int alignment, size_t bytesize);
 
 #endif

@@ -1,13 +1,17 @@
 kernel="$1"
-likwid="off"
+lkwid="off"
 compiler="g++"
+#compiler="FCC"
 LIKWID_FLAG=""
 LIKWID_LIB=""
 if [[ "$likwid" == "on" ]]; then
 	LIKWID_FLAG="-I${LIKWID_INCDIR} -DLIKWID_PERFMON"
 	LIKWID_LIB="-L${LIKWID_LIBDIR} -llikwid"
 fi
-INCLUDE_FLAGS="-DALIGNED -O3 -msve-vector-bits=512 -march=armv8.2-a+sve -Iincludes ${LIKWID_FLAG}"
+# g++
+INCLUDE_FLAGS="-DTHPALLOC -DALIGNED -O3 -msve-vector-bits=512 -march=armv8.2-a+sve -Iincludes ${LIKWID_FLAG}"
+# FCC
+#INCLUDE_FLAGS="-DALIGNED -O3 -Ksimd_reg_size=512 -march=armv8.2-a+sve -Iincludes ${LIKWID_FLAG}"
 
 ${compiler} ${INCLUDE_FLAGS} -S ${kernel}.cpp
 if [[ ${kernel} == "load" || ${kernel} == "load2" || ${kernel} == "load4" ]]; then
