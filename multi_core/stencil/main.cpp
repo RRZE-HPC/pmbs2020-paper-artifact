@@ -1,6 +1,7 @@
 #include <iostream>
 #include "timer.h"
 #include "allocate.h"
+#include <omp.h>
 #ifdef LIKWID_PERFMON
 	#include "likwid.h"
 #endif
@@ -12,7 +13,7 @@ int main(int argc, char *argv[])
 #ifdef LIKWID_PERFMON
 	LIKWID_MARKER_INIT;
 #endif
-	double freq = 1.8*1e9;
+	double freq = 2.2*1e9;
 
 	int N_start = 64;
 	int N_end = 5000;
