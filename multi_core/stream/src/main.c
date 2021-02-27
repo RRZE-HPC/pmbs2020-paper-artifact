@@ -205,14 +205,14 @@ int main (int argc, char** argv)
         double flops = (double) benchmarks[j].flops *  N;
 
         if (flops > 0){
-            printf("%s%11.2f, %11.2f, %11.4f,  %11.4f,  %11.4f\n", benchmarks[j].label,
+            printf("%s%11.2f %11.2f %11.4f  %11.4f  %11.4f\n", benchmarks[j].label,
                     1.0E-06 * bytes/mintime[j],
                     1.0E-06 * flops/mintime[j],
                     avgtime[j],
                     mintime[j],
                     maxtime[j]);
         } else {
-            printf("%s%11.2f,    -,        %11.4f,  %11.4f,  %11.4f\n", benchmarks[j].label,
+            printf("%s%11.2f    -        %11.4f  %11.4f  %11.4f\n", benchmarks[j].label,
                     1.0E-06 * bytes/mintime[j],
                     avgtime[j],
                     mintime[j],
