@@ -7,10 +7,8 @@ ENABLE_LIKWID ?= true
 OPTIONS  =  -DSIZE=130000000ull
 OPTIONS +=  -DNTIMES=20
 OPTIONS +=  -DARRAY_ALIGNMENT=64
-OPTIONS +=  -msve-vector-bits=512
-OPTIONS += -march=armv8.2-a+sve -Ofast
-OPTIONS += -funroll-loops -ffast-math 
-OPTIONS += -DACLE_VERSION -fno-unroll-loops
+OPTIONS +=  -ffast-math
+OPTIONS +=  -DACLE_VERSION
 #-fvariable-expansion-in-unroller --param max-variable-expansions-in-unroller=4
 #OPTIONS +=  -DVERBOSE_AFFINITY
 #OPTIONS +=  -DVERBOSE_DATASIZE
